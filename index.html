@@ -1,59 +1,52 @@
 <!-- index.html -->
+
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Advanced Website</title>
+    <title>Advanced Website with Toggle Windows</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="#Domů">Domů</a></li>
-                <li><a href="#O mě">O mě</a></li>
-                <li><a href="#services">Servisy</a></li>
-                <li><a href="#Kontakty">Kontakty na mě</a></li>
-            </ul>
-        </nav>
+        <h1>Advanced Website with Toggle Windows</h1>
     </header>
 
-    <section id="home">
-        <h1>Scenáře do hry Train Simulator:Classic (Railworks)</h1>
-        <p>Veškeré scénáře tu jsou freeware, připadné dotazy zodpovím </p>
+    <section class="main-section" style="background-image: url('background-image.jpg');">
+        <div class="content">
+            <h2>Section 1</h2>
+            <p>This is the main content of Section 1.</p>
+            <button class="toggle-button" onclick="toggleWindow('toggleWindow1')">Open Toggle Window</button>
+            <div id="toggleWindow1" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeToggleWindow('toggleWindow1')">&times;</span>
+                    <p>This is the content of Toggle Window 1.</p>
+                    <a href="download1.pdf" download>Download PDF 1</a>
+                    <a href="download2.zip" download>Download ZIP 2</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ante vel elit facilisis hendrerit.</p>
+    <section class="main-section">
+        <div class="content">
+            <h2>Section 2</h2>
+            <p>This is the main content of Section 2.</p>
+            <button class="toggle-button" onclick="toggleWindow('toggleWindow2')">Open Toggle Window</button>
+            <div id="toggleWindow2" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeToggleWindow('toggleWindow2')">&times;</span>
+                    <p>This is the content of Toggle Window 2.</p>
+                    <a href="download3.docx" download>Download DOCX 3</a>
+                    <a href="download4.png" download>Download PNG 4</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Web Design</li>
-            <li>Mobile App Development</li>
-            <li>Data Analytics</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <!-- Add more sections as needed -->
 
     <script src="scripts.js"></script>
 
